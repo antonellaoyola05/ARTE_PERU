@@ -1,0 +1,111 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo con degradado y efecto */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo con imagen y efecto */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.shutterstock.com/image-photo/pune-india-handicraft-items-selective-600nw-2089963243.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    filter: blur(5px); /* Efecto de desenfoque */
+    z-index: -1;
+}
+
+
+/* Contenedor del formulario */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Estilo del formulario */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+p a {
+    color: #74b9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

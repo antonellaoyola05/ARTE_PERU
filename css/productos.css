@@ -1,0 +1,480 @@
+:root {
+    --color-white:#ffffff;
+    --color-gris:#2E2D33;
+    --color-red:#63292b;
+    --color-vino:#790614;
+    --color-input:#000000c0;
+    --color-barra-menu: #F9F6EC;
+    --color-letras-menu: #000000;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ICONO WHASTAPP */
+.icono-whatsapp {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    font-size: 2.5em;
+    z-index: 1000;
+    /*esta propiedad sirve para colocar elemntos por encima o detras , colocar un numero positivo y grande para sobreponerlo*/
+    background-color: #25d366;
+    padding: 0.2em;
+    border-radius: 100%;
+    border: #31d344 solid 2px;
+    box-shadow: 3px 3px 2px var(--sombras);
+}
+
+/* INICIO DE ESTILOS DE MENU */
+.navbar {
+    background-color: var(--color-barra-menu);
+    height: 80px;
+    z-index: 10000000;
+}
+
+.logo_menu {
+    height: 70px;
+    width: 120px;
+}
+
+.login_button {
+    background-color: #790614;
+    color: white;
+    font-size: 1em;
+    padding: 8px 20px;
+    border-radius: .5em;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.login_button:hover {
+    background-color: var(--color-white);
+    color: var(--color-letras-menu);
+    border: 1.5px solid #790614;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: var(--color-letras-menu);
+    font-family: "Inder", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.nav-link:hover,
+nav-link.active {
+    color: var(--color-vino);
+}
+
+@media(min-width:991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-gris);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+        z-index: 100000;
+    }
+
+    .nav-link::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+/* FIN DE ESTILOS DE MENU */
+/* ESTILOS DEL BANER INICIO */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url('../images/artesana.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px; /* Ajuste para el menú fijo */
+}
+
+.banner-title {
+    font-size: 4rem;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.titulo{
+    text-align: center;
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group{
+    border-radius: .5em;
+    border: 2px solid var(--color-red);
+}
+
+.input-group-text i{
+    color: var(--color-red);
+}
+
+/* Media Queries para hacer el contenido responsive */
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+    .banner-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+/* fin de estilos del banner de inicio */
+
+/* INICIO DE SECCION DE TITTULO */
+.title-productos{
+    background-color: var(--color-barra-menu);
+}
+
+.title-productos h1{
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: var(--color-vino);
+}
+/* FIN DE SECCION DE TITTULO */
+
+.seccion-busqueda h1{
+    font-family: "Inder", sans-serif;
+    color: var(--color-gris);
+    font-size: 1.5em;
+}
+
+.btn-busqueda{
+    display: flex;
+    gap: 15px;
+}
+.btn-filtros{
+    color: var(--color-white);
+    font-family: "Inder", sans-serif;
+    border: 2px solid var(--color-red);
+    background-color: var(--color-red);
+    text-decoration: none;
+    border-radius: .2em;
+    padding: 0.6em 1em 0.6em 1em;
+
+}
+
+.btn-filtros:hover{
+    color: var(--color-red);
+    background-color: var(--color-white);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-recomendado{
+    color: var(--color-red);
+    font-family: "Inder", sans-serif;
+    border: 2px solid var(--color-red);
+    background-color: var(--color-white);
+    text-decoration: none;
+    border-radius: .2em;
+    padding: 0.6em 1em 0.6em 1em;
+}
+
+.btn-recomendado:hover{
+    color: var(--color-white);
+    background-color: var(--color-red);
+    transition: 0.3s ease-in-out;
+}
+
+/* INCIO DE ESTILSO DE LOS PRODUCTOS */
+.seccion-productos{
+    background-color: var(--color-barra-menu);
+}
+
+.seccion-productos h5{
+    text-align: center;
+    color: var(--color-red);
+    font-family: "Contrail One", sans-serif;
+}
+
+.card{
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    transform: translateY(-1%);
+}
+
+.productos-stars-btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.productos-stars-btn i {
+    color: #daa520;
+    font-size: 1.4em;
+}
+
+.productos-stars-btn h1{
+    font-family: "Inder", sans-serif;
+    color: var(--color-gris);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* Estilo del contenedor de los botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Estilo de los botones */
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: "Inder", sans-serif;
+}
+
+.button-information{
+    background-color: var(--color-red);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+    font-family: "Inder", sans-serif;
+    color: var(--color-white);
+    border: 2px solid var(--color-red);
+}
+
+.button-information:hover{
+    color: var(--color-red);
+    background-color: var(--color-white);
+}
+
+.button-point{
+    background-color: var(--color-vino);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+    font-family: "Inder", sans-serif;
+    color: var(--color-white);
+    border: 2px solid var(--color-vino);
+}
+
+.button-point:hover{
+    color: var(--color-vino);
+    background-color: var(--color-white);
+}
+/* Media Queries para ajustar el ancho de los botones en pantallas pequeñas */
+@media (max-width: 480px) {
+    .button {
+        width: 90%;
+    }
+}
+
+.btn-point2{
+    text-align: center;
+    
+}
+
+.btn-point2 a{
+    text-decoration: none;
+    font-family: "Inder", sans-serif;
+    color: var(--color-white);
+    font-size: 1.2em;
+    background-color: var(--color-red);
+    padding: 0.5em 0.8em;
+    border-radius: .3em;
+    border: 2px solid var(--color-red);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-point2 a:hover{
+    background-color: var(--color-white);
+    color: var(--color-red);
+}
+
+.pagination a{
+    color: var(--color-red);
+}
+/* FIN DE ESTILOS DE LOS PRODUCTOS */
+
+
+/* INICIO ESTILOS FOOTER */
+footer{
+    text-align: center;
+    align-items: center;
+    padding: .5em;
+    background-color: var(--color-vino);
+    border-top: 3px solid var(--color-red);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.logo_footer{
+    border-right: 2px solid var(--color-red);
+}
+.logo_footer img{
+    width: 200px;
+    height: 200px;
+    text-align:center ;
+}
+
+.contactos_footer h1{
+    color: var(--color-white);
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: start;
+}
+
+.contactos_footer ul{
+    color: var(--color-white);
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: start;
+}
+.nosotros_footer{
+    color: var(--color-white);
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    text-align: center;
+}
+/* FIN ESTILOS FOOTER */
+
+
+/*MODAL*/
+.modal-logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.modal-product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8B0000; /* Un rojo oscuro */
+}
+
+.modal-product-description {
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-product-details {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.modal-product-pricing {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.modal-buttons .btn {
+    font-size: 0.9rem;
+}
+
+.modal-buttons .btn-outline-danger {
+    border-color: #8B0000;
+    color: #8B0000;
+}
+
+.modal-buttons .btn-outline-danger:hover {
+    background-color: #8B0000;
+    color: white;
+}
+
+.modal-buttons .btn-dark {
+    background-color: #333;
+    color: white;
+}
+
+.modal-buttons .btn-dark:hover {
+    background-color: #555;
+}
+
+.enlace{
+    text-decoration: none;
+    color: white;
+}
